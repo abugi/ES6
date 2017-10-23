@@ -38,7 +38,7 @@ var showName = function(){
  /*Note: this code doesn't run because only declaration is hoisted 
 	and assignment is left in place.
  */
-// }
+}
 
 /* 
 	In es6 however, we have to declare a variable before it is used.
