@@ -41,6 +41,8 @@ var showName = function(){
 }
 
 /* 
-	In es6 however, we have to declare a variable before it is used.
-	In other words, it does not support Hoisting.
+	In es6 however, with the introduction of let and const keywords
+	doing the ssame thing as the var keyword,we have to declare a 
+	variable before it is used.
+	In other words, they do not support Hoisting.
 */
