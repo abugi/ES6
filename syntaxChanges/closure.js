@@ -34,3 +34,11 @@ return bar;
 }
 var baz = foo();
 baz(); // 2 -- Whoa, closure was just observed, man.
+
+
+function wait(message) {
+setTimeout( function timer(){
+console.log( message );
+}, 1000 );
+}
+wait( "Hello, closure!" );
