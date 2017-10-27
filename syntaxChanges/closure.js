@@ -45,7 +45,10 @@ wait( "Hello, closure!");
 
 //loops and closure
 /* 
-	
+	First, let’s explain where 6 comes from. The terminating condition of
+the loop is when i is not <=5. The first time that’s the case is when i is
+6. So, the output is reflecting the final value of the i after the loop
+terminates.
 */
 for (var i=1; i<=5; i++) {
 setTimeout( function timer(){
