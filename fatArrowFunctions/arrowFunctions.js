@@ -1,4 +1,4 @@
-alert("arrow conected")
+
 //Traditional method
 function fn(){
 	console.log("Hello");
@@ -22,8 +22,15 @@ calc(4);
 /*if you have only one argument in the parenthesis, you could leave out the
 parenthesis. Note that this is the only situation where you can do this. 
 */
-const calc1 = a => {
-console.log(2 * a);
-};
+const calc1 = a => console.log(2 * a);
 calc(4);
 
+//Arrow function and the "this" keyword
+function dis(){
+	console.log(this);
+};
+
+const dis1 = () => console.log(this);
+
+var button = document.querySelector("button");
+button.addEventListener("click", dis1)
