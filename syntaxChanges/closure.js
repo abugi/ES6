@@ -1,4 +1,8 @@
 /* 
+	A closure is the combination of a function and the lexical environment
+	within which that function was declared. This environment consists of 
+	any local variables that were in-scope at the time the closure was 
+	created.
 	Closures happen as a result of writing code that relies on 
 	lexical scope.
 	Closure is when a function is able to remember and access its 
