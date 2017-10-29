@@ -44,31 +44,42 @@ console.log( message );
 wait( "Hello, closure!"); 
 
 //loops and closure
+
+for (var i=1; i<=5; i++) {
+	setTimeout( function timer(){
+	console.log( i );
+	}, i*1000 );
+}
 /* 
-	First, let’s explain where 6 comes from. The terminating condition of
-the loop is when i is not <=5. The first time that’s the case is when i is
-6. So, the output is reflecting the final value of the i after the loop
-terminates.
+	In the code above, we get 6 printed 6 times,  which is contrary to 
+	the output we expect. 
+	First, let’s explain where 6 comes from. The terminating condition 
+	of loop is when i is not <=5. The first time that’s the case is when
+	i is 6. So, the output is reflecting the final value of the i after 
+	the loop terminates. And as we have already seen, all the functions 
+	share the same global scope which has only one "i" in it.
 */
-for (var i=1; i<=5; i++) {
-setTimeout( function timer(){
-console.log( i );
-}, i*1000 );
-}
 
 for (var i=1; i<=5; i++) {
-(function(){
-setTimeout( function timer(){
-console.log( i );
-}, i*1000 );
-})();
+	(function(){
+	setTimeout( function timer(){
+	console.log( i );
+	}, i*1000 );
+	})();
 }
+/*
+	the code above still doesn't give us the expected outcome because even 
+	though IIFEs create their own scope, the scope created by the IIFE is
+	and does nothing.
+	so to actually solve the problem, we need a scope with its own copy of
+	"i" each funciton will make reference to at the end of the loop.
+ */
 
-for (var i=1; i<=5; i++) {
-(function(){
-var j = i;
-setTimeout( function timer(){
-console.log( j );
-}, j*1000 );
-})();
+for (var i=1; i<=5; i++){
+	(function(){
+	var j = i;
+	setTimeout( function timer(){
+	console.log( j );
+	}, j*1000 );
+	})();
 }
