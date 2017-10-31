@@ -27,10 +27,18 @@ calc(4);
 
 //Arrow function and the "this" keyword
 function dis(){
-	console.log(this);
+	console.log(this); //"this" refers to the element calling the function
 };
 
-const dis1 = () => console.log(this);
+const dis1 = () => console.log(this); //refers to the global windows object
 
 var button = document.querySelector("button");
-button.addEventListener("click", dis1)
+button.addEventListener("click", dis)
+
+/* 
+	with the traditional function, the "this" keyword would usually refers to
+	the element calling the function(i.e button). But with arrow functions, 
+	the " this" keyword always refers to the global object. So we can conclude 
+	by saying that the arrow function does not does not create its own "this" 
+	keyword.	
+*/
