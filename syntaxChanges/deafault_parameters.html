@@ -45,6 +45,13 @@
 				return number == compare;
 			}
 			console.log(val4());
+
+			//using function as parameter
+			let r = (x,y) => x - y;
+			function val5(number, compare = r(5, 3)){
+				return number !== compare;
+			}
+			console.log(val5(2))
 		</script>
 	</body>
 </html>
