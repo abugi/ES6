@@ -6,10 +6,30 @@
 	<body>
 
 		<script type="text/javascript">
+			//before es6
 			function foo(x, y){
 				return x == y;
 			}
 			console.log(foo(10, 10));
+			let res = (foo(10, 1));
+			console.log(res)
+			document.write(res);
+
+			//with es6, we can set default value for the parameters
+			function val(number, compare = 10){
+				return number == compare;
+			}
+			console.log(val(10));
+
+			function val1(number =10, compare = 10){
+				return number == compare;
+			}
+			console.log(val1());
+
+			function val2(number = 0, compare = 10){
+				return number == compare;
+			}
+			console.log(val2(10));
 		</script>
 	</body>
 </html>
