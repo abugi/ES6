@@ -33,9 +33,17 @@
 			let obj = {
 				name,
 				age,
-				location: "abuja"
+				location: "abuja",
+				_greet: function(){  //ES5
+					console.log(this.location)
+				},
+				greet(){  //ES6
+					console.log(this.name + "," + this.age);
+				}
 			}
 			console.log(obj);
+			obj._greet();
+			obj.greet();
 	</script>
 </body>
 </html>
