@@ -44,6 +44,18 @@
 			console.log(obj);
 			obj._greet();
 			obj.greet();
+
+			//we can create dynamic fields in object literals
+			const _name = "Kerry";
+			const _age = 30;
+			const ageField = _age;
+
+			const _obj = {
+				_name,
+				ageField
+			}
+			console.log(_obj);
+
 	</script>
 </body>
 </html>
