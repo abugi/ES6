@@ -9,8 +9,15 @@
                /* the spread and rest operators have exactly the same syntax but varies in
                functionality depending on where it is used in the program. */
 
-               /* spread operator is used when you have a group of elements (e.g array or objects)
+               /* spread operator is used when you have a group of elements (e.g array or objects or any iterable)
                  that needs to be split into individual values */
+               function foo(x,y,z){
+                    console.log(x,y,z);
+               }
+               foo(...[20,21,22]);
+
+               let _foo = (r,s,t) => console.log(r,s,t);
+               _foo(7,8,9);
 
           </script>
      </body>
