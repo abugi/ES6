@@ -11,13 +11,20 @@
 
                /* spread operator is used when you have a group of elements (e.g array or objects or any iterable)
                  that needs to be split into individual values */
+
+               //with traditional functions
                function foo(x,y,z){
                     console.log(x,y,z);
                }
                foo(...[20,21,22]);
 
+               //with fat arrow functions
                let _foo = (r,s,t) => console.log(r,s,t);
                _foo(7,8,9);
+
+               const arr = [20, 21, 22, 23, 24, 25];
+               const max = Math.max();
+               console.log(max);
 
           </script>
      </body>
