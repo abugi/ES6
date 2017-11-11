@@ -35,11 +35,11 @@
                /* Rest operator does the exact opposite of spread. It gathers individual values
                 into an array.
                */
-               function foo(x,y,...z){
+               function foo(x,y,...z){  //... is acting as a rest operator
                     console.log(x,y,z);
-                    console.log(x,y,...z);
+                    console.log(x,y,...z); //... is a spread operator
                }
-               foo(1,2,3,4,5,6,7);
+               foo(1,2,3,4,5,6,7); // 1 2 [3, 4, 5, 6, 7]
           </script>
      </body>
 </html>
