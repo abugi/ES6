@@ -1,6 +1,6 @@
 <script>
      /* 
-     the for ...of loop loops directly over any iterable picking out individual values.
+     the for ...of loop loops directly over any iterable (arryas and strings) picking out individual values.
      */
      var a = ["a","b","c","d","e"];
           for (var idx in a) {
@@ -16,5 +16,10 @@
           for (var i = 0; i < a.length; i++) {
           console.log( i );
           console.log( a[i] ); //for loop picks both index number and value of iterable at a particular index
+     }
+
+     const name = "MUSAABUGI";
+     for (letter of name){
+          console.log(letter);
      }
 </script>
