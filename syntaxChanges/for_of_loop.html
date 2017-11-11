@@ -3,7 +3,18 @@
      the for ...of loop loops directly over any iterable picking out individual values.
      */
      var a = ["a","b","c","d","e"];
-for (var idx in a) {
-console.log( idx );
-}
+          for (var idx in a) {
+          console.log( idx ); //for ..in loop picks out only the index numbers of the iterable
+     }
+
+     var a = ["a","b","c","d","e"];
+          for (var val of a) {
+          console.log( val ); //for ..of loop picks out only the value of iterables at a particular index
+     }
+
+     var a = ["a","b","c","d","e"];
+          for (var i = 0; i < a.length; i++) {
+          console.log( i );
+          console.log( a[i] ); //for loop picks both index number and value of iterable at a particular index
+     }
 </script>
