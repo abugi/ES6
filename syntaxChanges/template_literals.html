@@ -20,4 +20,18 @@
           and am happy to meet you.
           `;
      console.log(intro);
+
+     /*
+          apart from strings, the syntax ${...} also allows interpolated expressions inside of it
+          including function calls or any valid expressions.
+           
+     */
+     function upper(s) {
+          return s.toUpperCase();
+     }
+          var who = "reader"
+          var text =
+          `A very ${upper( "warm" )} welcome
+          to all of you ${upper( `${who}s` )}!`;
+          console.log( text );
 </script>
