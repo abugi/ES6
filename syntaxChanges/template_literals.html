@@ -45,9 +45,9 @@
      }
      myTaggedLiteral`test`; 
 
-     function _myTaggedLiteral(strings, value) {
+     function _myTaggedLiteral(strings, value, value2) {
     console.log(strings, value);
      }
-     var loc = 'north';
-     _myTaggedLiteral`test ${loc}`; 
+    var loc = "north";
+     _myTaggedLiteral`test ${loc} ${2 + 3}`; 
 </script>
