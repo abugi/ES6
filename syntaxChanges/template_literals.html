@@ -36,10 +36,17 @@
           console.log( text );
 
      /* 
-      
+      Another feature 'tagged template literals' allows the creation of tagged templates.
+      this involes creating a function tha we call without the normal parenthesis but
+      with values enclosed in `` which produces an array of values.
      */
      function myTaggedLiteral(strings) {
     console.log(strings);
      }
      myTaggedLiteral`test`; 
+
+     function myTaggedLiteral(strings, value) {
+    console.log(strings, value);
+     }
+     myTaggedLiteral`test north`; 
 </script>
