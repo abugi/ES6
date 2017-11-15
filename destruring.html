@@ -4,8 +4,18 @@
      */
 
      //extracting data from arrays
-     const names = ['Luke', 'Eva', 'Phil'];
-     const [name] = names;
+     const names = ['Luke', 'Eva', 'Phil', 'Ander', 'Jason', 'Bally'];
+     const [name] = names; 
+     const [name1, name2, ...rest] = names;
      
      console.log(name)
+     console.log(name1, name2, rest);
+
+     //default values when elements are missing
+     newNames = ['amisco', 'shareefat', 'maryam'];
+     const [first, second, third, fourth = missingName] = newNames;  
+     console.log(fourth); // undefined
+
+     // const [one, two, three] = newNames;
+     // console.log(four);
 </script>
