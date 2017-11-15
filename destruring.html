@@ -13,9 +13,9 @@
 
      //default values when elements are missing
      newNames = ['amisco', 'shareefat', 'maryam'];
-     const [first, second, third, fourth = missingName] = newNames;  
+     const [first, second, third, fourth] = newNames;  
      console.log(fourth); // undefined
 
-     // const [one, two, three] = newNames;
-     // console.log(four);
+     const [one, two, three, four = 'nameMissing'] = newNames;
+     console.log(one, two, three, four, five);
 </script>
