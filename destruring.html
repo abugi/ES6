@@ -10,6 +10,8 @@
      
      console.log(name)
      console.log(name1, name2, rest);
+     let m = rest.push('Alice');
+     console.log(rest);
 
      //default values when elements are missing
      newNames = ['amisco', 'shareefat', 'maryam'];
@@ -17,5 +19,5 @@
      console.log(fourth); // undefined
 
      const [one, two, three, four = 'nameMissing'] = newNames;
-     console.log(one, two, three, four, five);
+     console.log(one, two, three, four);
 </script>
