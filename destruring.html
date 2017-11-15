@@ -24,4 +24,21 @@
      //skipping elements in the array
      var [fn, , tn] = names;  
      console.log(fn, tn); // 'Luke' 'Phil' (eva skipped)
+
+     //destructuring objects
+     const person = {  
+          personName: 'Luke',
+          personAge: '24',
+          facts: {
+          hobby: 'Photo',
+          work: 'Software Developer'
+          }
+     }
+
+     const {personName, personAge} = person;  //in  the case of objects, we use curly braces on the left
+     console.log(personName, personAge); // 'Luke' '24' 
+
+     //extracting nested values
+     const {facts: {work}} = person;  
+     console.log(work); 
 </script>
