@@ -41,4 +41,15 @@
      //extracting nested values
      const {facts: {work}} = person;  
      console.log(work); 
+
+     //setting default value for when data is missing
+     const {hometown = 'Unknown'} = person;  
+     console.log(hometown); // 'Unknown'
+
+     //destructuring function parameters
+     const toString = ({personName, personAge}) => {  
+     return `${personName} is ${personAge} years old`;
+     }
+
+     console.log(toString(person)); // Luke is 24 years old 
 </script>
