@@ -20,4 +20,8 @@
 
      const [one, two, three, four = 'nameMissing'] = newNames;
      console.log(one, two, three, four);
+
+     //skipping elements in the array
+     var [fn, , tn] = names;  
+     console.log(fn, tn); // 'Luke' 'Phil' (eva skipped)
 </script>
