@@ -69,4 +69,24 @@
      var o = { x: aa, y: bb };
      var { x: AA, y: BB } = o;
      console.log( AA, BB ); // 10 20
+
+     /*
+       There’s another way to think about this syntax though, which may help ease the confusion.
+       Consider:
+     */
+     var aa = 10, bb = 20;
+     var o = { x: aa, y: bb };
+     var { x: AA, y: BB } = o;
+     console.log( AA, BB ); // 10 20
+
+     /*
+     In the { x: aa, y: bb } line, the x and y represent the object properties. In the { x:
+     AA, y: BB } line, the x and the y also represent the object properties.
+     Recall earlier I asserted that { x, .. } was leaving off the x: part? In those two lines,
+     if you erase the x: and y: parts in that snippet, you’re left only with aa, bb, AA, and BB,
+     which in effect are assignments from aa to AA and from bb to BB. That’s actually what
+     we’ve accomplished with the snippet.
+     So, that symmetry may help to explain why the syntactic pattern was intentionally
+     flipped for this ES6 feature.
+     */
 </script>
