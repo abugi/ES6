@@ -113,4 +113,17 @@
      side as the first element in the statement is taken to be a
      statement block instead of an object.
      */
+
+     //Nested destructuring
+     /*
+     If the values you’re destructuring have nested objects or arrays, you can destructure
+     those nested values as well:
+     */
+     var a1 = [ 1, [2, 3, 4], 5 ];
+     var [ a, [ b, c, d ], e ] = a1;
+     console.log( a, b, c, d, e ); // 1 2 3 4 5
+
+     var o1 = { x: { y: { z: 6 } } };
+     var { x: { y: { z: w } } } = o1;
+     console.log( w ); // 6
 </script>
