@@ -61,5 +61,12 @@
           var o = { a: X, b: Y };
           console.log( o.a, o.b ); // 10 20
 
-     
+     /*
+       in a destructuring assingment however, the order is flipped in that we have the source value first
+       then target.
+     */
+     var aa = 10, bb = 20;
+     var o = { x: aa, y: bb };
+     var { x: AA, y: BB } = o;
+     console.log( AA, BB ); // 10 20
 </script>
