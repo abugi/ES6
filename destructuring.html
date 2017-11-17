@@ -98,8 +98,19 @@
      Consider:
      */
      var a, b, c, x, y, z;
+
      [a,b,c] = foo();
      ( { x, y, z } = bar() );
      console.log( a, b, c );
      console.log( x, y, z );
+
+     /*
+     The variables can already be declared, and then the destructuring only does assignments,
+     exactly as we’ve already seen.
+     For the object destructuring form specifically, when leaving off a
+     var/let/const declarator, we had to surround the whole assignment
+     expression in ( ), because otherwise the { .. } on the lefthand
+     side as the first element in the statement is taken to be a
+     statement block instead of an object.
+     */
 </script>
