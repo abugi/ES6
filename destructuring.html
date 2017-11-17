@@ -97,5 +97,9 @@
      not just a declaration.
      Consider:
      */
-     
+     var a, b, c, x, y, z;
+     [a,b,c] = foo();
+     ( { x, y, z } = bar() );
+     console.log( a, b, c );
+     console.log( x, y, z );
 </script>
