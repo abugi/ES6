@@ -27,6 +27,17 @@
      //Generators
      /*
      While custom iterators are a useful tool, their creation requires careful programming due to the need to explicitly maintain their internal state. Generators provide a powerful alternative: they allow you to define an iterative algorithm by writing a single function which can maintain its own state.
-     
+     A GeneratorFunction is a special type of function that works as a factory for iterators. When it is executed it returns a new Generator object. A function becomes a GeneratorFunction if it uses the function* syntax.
      */
+     function* idMaker() {
+     var index = 0;
+     while(true)
+     yield index++;
+     }
+
+     var gen = idMaker();
+
+     console.log(gen.next().value); // 0
+     console.log(gen.next().value); // 1
+     console.log(gen.next().value); // 2
 </script>
