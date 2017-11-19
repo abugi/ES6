@@ -20,7 +20,8 @@
 
      //Once initialized, the next() method can be called to access key-value pairs from the object in turn:
      var it = makeIterator(['musa', 'abugi']);
-     console.log(it.next().value); // 'musa'
+     var val= next().value;
+     console.log(it.val); // 'musa'
      console.log(it.next().value); // 'abugi'
      console.log(it.next().done);  // true
 </script>
