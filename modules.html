@@ -33,5 +33,12 @@
     */
     //also note that anything not labelled with the export keyword stays within the module.
 
+    //You can also rename a module member dutring named export
+    function foo() { .. };
+     export { foo as bar };
+     /*When this module is imported, only the bar member name is available to import; foo
+     stays hidden inside the module.*/
+     
+
      
 </script>
