@@ -37,8 +37,26 @@
     function foo() { .. };
      export { foo as bar };
      /*When this module is imported, only the bar member name is available to import; foo
-     stays hidden inside the module.*/
+     stays hidden inside the module.
+
+     Module exports are not just normal assignments of values or references, as you’re
+     accustomed to with the = assignment operator. Actually, when you export something,
+     you’re exporting a binding (kinda like a pointer) to that thing (variable, etc).
+     That means that if you change the value inside your module of a variable you
+     already exported a binding to, even if it’s already been imported ,
+     the imported binding will resolve to the current value.
+     Consider:
+     */
+
+     var awesome = 42;
+     export { awesome };
+     // later
+     awesome = 100;
+
+     /*
      
+     */
+
 
      
 </script>
