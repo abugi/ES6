@@ -99,10 +99,32 @@
      export function baz() { .. }
 
      //To import that module’s default export and its two named exports:
-     
+
      import FOOFN, { bar, baz as BAZ } from "foo";
      FOOFN();
      bar();
      BAZ();
+
+     /*
+     The strongly suggested approach from ES6’s module philosophy is that you only
+     import the specific bindings from a module that you need. If a module provides 10
+     API methods, but you only need two of them, some believe it wasteful to bring in the
+     entire set of API bindings.
+     One benefit, besides code being more explicit, is that narrow imports makes static
+     analysis and error detection (accidentally using the wrong binding name, for
+     instance) more robust.
+     Of course, that’s just the standard position influenced by ES6 design philosophy;
+     there’s nothing that requires adherence to that approach.
+     Many developers would be quick to point out that such approaches can be more tedious,
+     requiring you to regularly revisit and update your import statement(s) each time
+     you realize you need something else from a module. The tradeoff is in exchange for
+     convenience.
+     In that light, the preference might be to import everything from the module into a
+     single namespace, rather than importing individual members, each directly into the
+     scope. Fortunately, the import statement has a syntax variation which can support
+     this style of module consumption, called namespace import.
+     Consider a "foo" module exported as:
+     */
+    
      
 </script>
