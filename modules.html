@@ -145,6 +145,15 @@
      outside of the namespace binding, as a top-level identifier. Consider a "world" module
      exported as:
      */
+     export default function foo() { .. }
+     export function bar() { .. }
+     export function baz() { .. }
+     //And this import:
+     import foofn, * as hello from "world";
+     foofn();
+     hello.default();
+     hello.bar();
+     hello.baz();
 
      
 </script>
