@@ -74,5 +74,13 @@
      API (static analysis and error assertion apply). They are bound as top-level identifiers
      in your current scope:
     */
+
+    import { foo } from "foo";
+     foo();
+
+     //You can rename the bound identifiers imported, as:
+     
+     import { foo as theFooFunc } from "foo";
+     theFooFunc();
      
 </script>
