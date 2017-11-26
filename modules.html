@@ -90,5 +90,19 @@
      import foo from "foo";
      // or:
      import { default as foo } from "foo";
+
+     /*You can also import a default export along with other named exports, if the module
+     has such a definition. Recall this module definition from earlier:
+     */
+     export default function foo() { .. }
+     export function bar() { .. }
+     export function baz() { .. }
+
+     //To import that module’s default export and its two named exports:
+     
+     import FOOFN, { bar, baz as BAZ } from "foo";
+     FOOFN();
+     bar();
+     BAZ();
      
 </script>
