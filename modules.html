@@ -79,8 +79,16 @@
      foo();
 
      //You can rename the bound identifiers imported, as:
-     
+
      import { foo as theFooFunc } from "foo";
      theFooFunc();
+
+     /*If the module has just a default export that you want to import and bind to an identifier,
+     you can opt to skip the { .. } surrounding syntax for that binding. The import
+     in this preferred case gets the nicest and most concise of the import syntax forms:
+     */ 
+     import foo from "foo";
+     // or:
+     import { default as foo } from "foo";
      
 </script>
