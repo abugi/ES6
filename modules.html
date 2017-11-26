@@ -70,6 +70,9 @@
     The "foo" string is called a module specifier. Because the whole goal is statically analyzable
      syntax, the module specifier must be a string literal; it cannot be a variable
      holding the string value.
+     The foo, bar, and baz identifiers listed must match named exports on the module’s
+     API (static analysis and error assertion apply). They are bound as top-level identifiers
+     in your current scope:
     */
      
 </script>
