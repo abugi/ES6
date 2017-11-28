@@ -41,5 +41,13 @@
      constructor, and are thus shared by all objects. (Typing {}, by the way, is
      equivalent to typing new Object().)
      */
+     function Rabbit(adjective) {
+     this.adjective = adjective;
+     this.speak = function(line) {
+     print("The ", this.adjective, " rabbit says '", line, "'");
+     };
+     }
+     var killerRabbit = new Rabbit("killer");
+     killerRabbit.speak("GRAAAAAAAAAH!");
 
 </script>
