@@ -76,5 +76,11 @@
      objects to give them more specific, appropriate values than the generic ones
      it takes from its prototype. The following code demonstrates this technique:
      */
+     Rabbit.prototype.teeth = "small";
+     killerRabbit.teeth; //"small"
+     killerRabbit.teeth = "long, sharp, and bloody";
+     killerRabbit.teeth; //"long, sharp, and bloody"
+     Rabbit.prototype.teeth;
+     ! "small"
 
 </script>
