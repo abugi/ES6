@@ -50,6 +50,21 @@
      var killerRabbit = new Rabbit("killer");
      killerRabbit.speak("GRAAAAAAAAAH!");
      //It is convention to start the names of constructors with a capital letter.
-     
+
+     /*
+     Constructors and Prototypes
+     Our rabbit objects are based on the prototype associated with the Rabbit
+     constructor. You can use a constructor’s prototype property to access this
+     prototype.
+     Every function you define automatically gets a prototype property,
+     which holds an object—the prototype of the function. This prototype gets
+     a constructor property, which points back at the function to which it belongs.
+     Because the rabbit prototype is itself an object, it is based on the Object prototype
+     and shares its toString method. Thus, any rabbit created with the
+     Rabbit constructor has this method.
+     Even though objects seem to share the properties of their prototype,
+     this sharing is one-way. The properties of the prototype influence the object
+     based on it, and changes to these objects never affect the prototype.
+     */
 
 </script>
