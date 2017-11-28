@@ -65,6 +65,16 @@
      Even though objects seem to share the properties of their prototype,
      this sharing is one-way. The properties of the prototype influence the object
      based on it, and changes to these objects never affect the prototype.
+     The precise rules are these: When looking up the value of a property,
+     JavaScript first looks at the properties that the object itself has. If there is a
+     property that has the name we are looking for, that is the value we get. If
+     there is no such property, it continues searching the prototype of the object,
+     and then the prototype of the prototype, and so on. If no property is found,
+     the value undefined is given. On the other hand, when setting the value of a
+     property, JavaScript never goes to the prototype but always sets the property
+     in the object itself. This means you can “override” properties in your own
+     objects to give them more specific, appropriate values than the generic ones
+     it takes from its prototype. The following code demonstrates this technique:
      */
 
 </script>
