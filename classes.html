@@ -142,11 +142,17 @@
      let king2 = new Animal2('Mufasa', 4.5);
      console.log(king2.intro());
 
-     //Creating suc-classes that inherit properties from an existing class
+     //Creating sub-classes that inherit properties from an existing class
+
      class Lion extends Animal{
+     //We can add properties to the child class as follows:
+     constructor(name, height, color){
+               super(name, height);
+               this.color = color;
+          }
 
      }
-     const son = new Lion('Simba', 2.0);
+     const son = new Lion('Simba', 2.0, 'golden');
      console.log(son);
 
 </script>
