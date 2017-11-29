@@ -129,4 +129,17 @@
      let king = new Animal("Mufasa", 4.5)
      console.log(king);
 
+     //we can add a special method to the class object as follows:
+     class Animal2{
+          constructor(name1, height1){
+               this.name      = name1;
+               this.height    = height1;
+          }
+          intro(){
+               `Hi, I am ${this.name}, I am ${this.height}!!`;
+          }
+     }
+     let king2 = new Animal2('Mufasa', 4.5);
+     console.log(king2);
+
 </script>
