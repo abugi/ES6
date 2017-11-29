@@ -167,4 +167,23 @@
      const Snake = new Lion('Black mamba', 12, 'brown');
      console.log(Snake);
 
+     //Static methods
+     /*
+      These are methods created within classes and can be accessed without making a new instance of the class
+     */
+     class Calculator{
+          static multiply(a, b){
+               return a*b;
+          }
+
+          static add(c,d){
+               return c+d * multiplyResult;
+          }
+     }
+     const multiplyResult = Calculator.multiply(5, 7);
+     console.log(multiplyResult);
+
+     const addResult = Calculator.add(20, 15);
+     console.log(addResult);
+
 </script>
