@@ -102,4 +102,21 @@
      /*An important difference between function declarations and class declarations is that function declarations are hoisted and class declarations are not.
      */
 
+     //Class expression
+    // unnamed
+     var Rectangle = class {
+          constructor(height, width) {
+          this.height = height;
+          this.width = width;
+          }
+     };
+
+     // named
+     var Rectangle = class Rectangle {
+          constructor(height, width) {
+          this.height = height;
+          this.width = width;
+          }
+     };
+
 </script>
