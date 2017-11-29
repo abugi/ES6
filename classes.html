@@ -44,7 +44,7 @@
      function Rabbit(adjective) {
      this.adjective = adjective;
      this.speak = function(line) {
-     print("The ", this.adjective, " rabbit says '", line, "'");
+     console.log("The ", this.adjective, " rabbit says '", line, "'");
      };
      }
      var killerRabbit = new Rabbit("killer");
@@ -104,7 +104,7 @@
 
      //Class expression
     // unnamed
-     var Rectangle = class {
+     var Rectangle1 = class {
           constructor(height, width) {
           this.height = height;
           this.width = width;
@@ -112,7 +112,7 @@
      };
 
      // named
-     var Rectangle = class Rectangle {
+     var Rectangle2 = class Rectangle {
           constructor(height, width) {
           this.height = height;
           this.width = width;
@@ -120,5 +120,12 @@
      };
 
      //Class body and method definitions
+     class Animal{
+          constructor(name, height){
+               this.name      = name;
+               this.height    = height;
+          }
+     }
+     console.log(new Animal("Mufasa", 4.5));
 
 </script>
