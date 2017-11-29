@@ -129,13 +129,13 @@
      let king = new Animal("Mufasa", 4.5)
      console.log(king);
 
-     //we can add a special method to the class object as follows:
+     //we can add a prototype method to the class object as follows:
      class Animal2{
           constructor(name1, height1){
                this.name      = name1;
                this.height    = height1;
           }
-          intro(){
+          intro(){ //prototype method
                return `Hi, I am ${this.name}, I am ${this.height}!!`;
           }
      }
