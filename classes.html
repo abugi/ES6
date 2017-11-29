@@ -150,9 +150,21 @@
                super(name, height);
                this.color = color;
           }
+     
+     hello(){
+          console.log(`My name is ${this.name} from pride rock!`)
+     }
 
      }
      const son = new Lion('Simba', 2.0, 'golden');
      console.log(son);
+     son.hello();
+
+     //We can create child classes based off of previously created child classes
+     class snake extends Lion{
+
+     }
+     const Snake = new Lion('Black mamba', 12, 'brown');
+     console.log(Snake);
 
 </script>
