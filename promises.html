@@ -7,7 +7,11 @@
 
      ASYNCHRONOUS PROGRAMS runs on an event loop engine. When a blocking operation happens, these operations are diverted to an event handler. So the programs keeps running without a block ever happening.
      */
-     const promise = new Promise((resolve, reject) => {
+
+     //Promise can be created using the promise constructor as follows:
+     const promise = new Promise((resolve, reject) => { 
+     //resolve holds the data for when the operation is successful
+     //reject holds the data for when the operation is not successful
           resolve('Resolved Promise Data');
      });
      promise.catch(error => console.log(error))
