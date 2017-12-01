@@ -12,8 +12,9 @@
      const promise = new Promise((resolve, reject) => { 
      //resolve holds the data for when the operation is successful
      //reject holds the data for when the operation is not successful
-          resolve('Resolved Promise Data');
+          resolve('Resolved Promise Data'); //the string is assumed to be the returned data
      });
+     //to access the returned data, we use the .then method
      promise.then(response => console.log(response))
      .catch(error => console.log(error));
 
