@@ -34,6 +34,9 @@
      doSomething(successCallback, failureCallback);
 
      //but modern functions return a promise you can attach your callbacks to instead
-     
+     let promise = doSomething(); 
+     promise.then(successCallback, failureCallback);
+     //or
+     doSomething().then(successCallback, failureCallback);
     
 </script>
