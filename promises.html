@@ -21,5 +21,14 @@
      /*
      However, most people are consumers of already-created promises returned from functions. This following guide will therefore explore consumption of returned promises.
      */
+     function successCallback(result) {
+          console.log("It succeeded with " + result);
+     }
+
+     function failureCallback(error) {
+          console.log("It failed with " + error);
+     }
+
+     doSomething(successCallback, failureCallback);
     
 </script>
