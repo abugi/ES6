@@ -23,20 +23,26 @@
      */
 
      //OLD-STYLE FUNCTIONS (call-back)
-     function successCallback(result) {
-          console.log("It succeeded with " + result);
-     }
+     // function successCallback(result) {
+     //      console.log("It succeeded with " + result);
+     // }
 
-     function failureCallback(error) {
-          console.log("It failed with " + error);
-     }
+     // function failureCallback(error) {
+     //      console.log("It failed with " + error);
+     // }
 
-     doSomething(successCallback, failureCallback);
+     // //doSomething(successCallback, failureCallback);
 
-     //but modern functions return a promise you can attach your callbacks to instead
-     let promise = doSomething(); 
-     promise.then(successCallback, failureCallback);
+     // //but modern functions return a promise you can attach your callbacks to instead
+     // let _promise = doSomething(); 
+     // _promise.then(successCallback, failureCallback);
      //or
-     doSomething().then(successCallback, failureCallback);
+     //doSomething().then(successCallback, failureCallback);
+
+     //lets use these two processes to demondtrate the non-blocking nature of promises
+     let p = new Promise((resolve, reject) => {
+          setTimeout(() => resolve('process completed successfully'), 3000);
+     });
+     p.then(response => console.log(response))
     
 </script>
