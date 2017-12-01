@@ -14,7 +14,7 @@
      //reject holds the data for when the operation is not successful
           resolve('Resolved Promise Data');
      });
-     promise.catch(error => console.log(error))
-     .then(response => console.log(response));
+     promise.then(response => console.log(response))
+     .catch(error => console.log(error));
     
 </script>
