@@ -8,8 +8,13 @@
      /*Objects are similar to Maps in that both let you set keys to values, retrieve those values, delete keys, and detect whether something is stored at a key. Because of this (and because there were no built-in alternatives), Objects have been used as Maps historically; 
      however, there are important differences that make using a Map preferable in certain cases:
      */
+     
      //Differences between Map and Object
      /*
-     
+     1. The keys of an Object are Strings and Symbols, whereas they can be any value for a Map, including functions, objects, and any primitive.
+     2. You can get the size of a Map easily with the size property, while the number of properties in an Object must be determined manually.
+     3. A Map is an iterable and can thus be directly iterated, whereas iterating over an Object requires obtaining its keys in some fashion and iterating over them.
+     4. An Object has a prototype, so there are default keys in the map that could collide with your keys if you're not careful. As of ES5 this can be bypassed by using map = Object.create(null), but this is seldom done.
+     5. A Map may perform better in scenarios involving frequent addition and removal of key pairs.
      */
 </script>
