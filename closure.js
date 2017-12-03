@@ -30,20 +30,20 @@ foo();
 */
 //lets look at a more obvious demonstration of closure
 function foo() {
-var a = 2;
-function bar() {
-console.log( a );
-}
-return bar;
+	var a = 2;
+	function bar() {
+	console.log( a );
+	}
+	return bar;
 }
 var baz = foo();
 baz(); // 2 -- Whoa, closure was just observed, man.
 
 
 function wait(message) {
-setTimeout( function timer(){
-console.log( message );
-}, 1000 );
+	setTimeout( function timer(){
+	console.log( message );
+	}, 1000 );
 }
 wait( "Hello, closure!"); 
 
