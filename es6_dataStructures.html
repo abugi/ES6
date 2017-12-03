@@ -28,7 +28,7 @@
      Map methods
      1. map.set(key, value) //sets the value of the key in map object and returns the map object
      2. map.get(key) //returns the value associated with a given key, or undefiend if none
-     3. map.value() //returns a new iterator object that contains the of each element in the map object in insertion order
+     3. map.values() //returns a new iterator object that contains the of each element in the map object in insertion order
      5. map.entries() //Returns a new Iterator object that contains an array of [key, value] for each element in the Map object in insertion order.
      6. map.has() //Returns a boolean asserting whether a value has been associated to the key in the Map object or not.
      7. map.delete() //Returns true if an element in the Map object existed and has been removed, or false if the element does not exist. Map.prototype.has(key) will return false afterwards.
@@ -44,7 +44,7 @@
      a.set(key1, 'Assigned value for string key1');
      a.set(key2, 'Assigned value for key2');
      a.set(key3, 'Assigned value for key3');
-     a.set(key4, 'Assigned value for key4');
+     a.set(function(){}, 'Assigned value for key4');
      console.log(a);
 
 </script>
