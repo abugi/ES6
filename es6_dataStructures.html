@@ -41,6 +41,8 @@
      8. map.clear() //Removes all key/value pairs from the Map object.
 
      9. map.forEach() //Calls callbackFn once for each key-value pair present in the Map object, in insertion order. If a thisArg parameter is provided to forEach, it will be used as the this value for each callback.
+
+     10. for ..of
      */
 
      let a = new Map();
@@ -49,17 +51,19 @@
      let key3 = {x: 'boy'};
      let key4 = function(){};
 
-     a.set(key1, 'Assigned value for string key1');
+     a.set(key1, 'Assigned value for key1');
      a.set(key2, 'Assigned value for key2');
      a.set(key3, 'Assigned value for key3');
      a.set(key4, 'Assigned value for key4');
      console.log(a);
+     for([key, value] of a){
+          console.log(key + " is the key for " + value);
+     }
      
      //OR
      var m = new Map()
      m.set('a', 1)
-     m.set('b', 2)
-     // {"a" => 1, "b" => 2}
+     m.set('b', 2) // {"a" => 1, "b" => 2}
 
      //create a map by passing a 2d Array
      let Arr = [[1, 'one'], [2, 'two'], [3, 'three']];
