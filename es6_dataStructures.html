@@ -113,4 +113,10 @@
 
      let emptySet = new Set();
      console.log(emptySet);
+
+     emptySet.add(12);
+     emptySet.add('12');
+     emptySet.add({});
+     emptySet.add(() => {});
+     console.log(emptySet);
 </script>
